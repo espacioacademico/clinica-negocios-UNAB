@@ -1,30 +1,1153 @@
-┌───────────────────────────────────────────────┐
-│  UNAB                         INICIO SERVICIOS│
-├───────────────────────────────────────────────┤
-│                                               │
-│          CLÍNICA DE NEGOCIOS                  │
-│     Escuela de Contador Auditor               │
-│                                               │
-│       [ Solicitar orientación ]               │
-│                                               │
-├───────────────────────────────────────────────┤
-│                                               │
-│             ¿QUIÉNES SOMOS?                  │
-│                                               │
-│  Información sobre la Clínica de Negocios     │
-│                                               │
-├───────────────────────────────────────────────┤
-│                                               │
-│              NUESTROS SERVICIOS               │
-│                                               │
-│   Tributario    Contable    Emprendimiento   │
-│                                               │
-├───────────────────────────────────────────────┤
-│                                               │
-│                  RECURSOS                     │
-│                                               │
-│       Guías | Material | Calculadoras         │
-│                                               │
-├───────────────────────────────────────────────┤
-│                  CONTACTO                     │
-└───────────────────────────────────────────────┘
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clínica de Negocios | Escuela de Contador Auditor UNAB</title>
+
+    <meta name="description"
+          content="Clínica de Negocios de la Escuela de Contador Auditor de la Universidad Andrés Bello. Orientación tributaria, contable y empresarial.">
+
+    <style>
+
+        /* =====================================================
+           VARIABLES INSTITUCIONALES
+        ===================================================== */
+
+        :root {
+            --azul-unab: #03102C;
+            --rojo-unab: #A90429;
+            --azul-secundario: #0b2854;
+            --gris: #f4f6f9;
+            --gris-texto: #555;
+            --blanco: #ffffff;
+        }
+
+
+        /* =====================================================
+           CONFIGURACIÓN GENERAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--gris-texto);
+            background: var(--blanco);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           BARRA SUPERIOR
+        ===================================================== */
+
+        header {
+            background: white;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .marcas {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+
+        .marca-unab {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--azul-unab);
+        }
+
+
+        .marca-fen {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--azul-unab);
+            border-left: 1px solid #ccc;
+            padding-left: 25px;
+        }
+
+
+        .marca-contador {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--azul-unab);
+            border-left: 1px solid #ccc;
+            padding-left: 25px;
+        }
+
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+
+        nav a {
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--azul-unab);
+        }
+
+
+        nav a:hover {
+            color: var(--rojo-unab);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 520px;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3,16,44,0.98) 0%,
+                    rgba(3,16,44,0.94) 45%,
+                    rgba(3,16,44,0.45) 75%,
+                    rgba(3,16,44,0.15) 100%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0a2a58,
+                    #0e4478
+                );
+
+            display: flex;
+            align-items: center;
+            color: white;
+            padding: 70px 8%;
+        }
+
+
+        .hero-contenido {
+            max-width: 700px;
+        }
+
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+
+        .hero h2 {
+            color: #f2b400;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+
+        .hero p {
+            font-size: 19px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+
+        .boton {
+            display: inline-block;
+            padding: 15px 28px;
+            background: var(--rojo-unab);
+            color: white;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+
+        .boton:hover {
+            transform: translateY(-2px);
+            background: #c20832;
+        }
+
+
+        /* =====================================================
+           ATENCIÓN PRESENCIAL
+        ===================================================== */
+
+        .atencion {
+            background: white;
+            margin: -60px auto 0;
+            position: relative;
+            width: 85%;
+            max-width: 1100px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+
+        .atencion-titulo {
+            color: var(--azul-unab);
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+
+        .atencion-horario {
+            color: var(--rojo-unab);
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+
+        .atencion-lugar {
+            color: #555;
+            margin-top: 5px;
+        }
+
+
+        /* =====================================================
+           SECCIONES
+        ===================================================== */
+
+        section {
+            padding: 80px 8%;
+        }
+
+
+        .titulo-seccion {
+            text-align: center;
+            color: var(--azul-unab);
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+
+        .subtitulo {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 45px;
+            color: #666;
+        }
+
+
+        /* =====================================================
+           QUIÉNES SOMOS
+        ===================================================== */
+
+        .quienes {
+            background: var(--gris);
+        }
+
+
+        .quienes-contenido {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+
+        .quienes-texto h3 {
+            color: var(--azul-unab);
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+
+        .check {
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+
+        .check span {
+            color: var(--rojo-unab);
+            margin-right: 10px;
+        }
+
+
+        /* =====================================================
+           SERVICIOS
+        ===================================================== */
+
+        .servicios-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+
+        .servicio {
+            background: white;
+            border: 1px solid #e2e6ec;
+            border-radius: 10px;
+            padding: 35px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+
+        .servicio:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+        }
+
+
+        .icono {
+            width: 70px;
+            height: 70px;
+            margin: auto auto 20px;
+            border-radius: 50%;
+            background: var(--azul-unab);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+
+        .servicio h3 {
+            color: var(--azul-unab);
+            margin-bottom: 12px;
+        }
+
+
+        .servicio a {
+            display: inline-block;
+            color: var(--rojo-unab);
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           RECURSOS
+        ===================================================== */
+
+        .recursos {
+            background: var(--gris);
+        }
+
+
+        .recursos-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+
+        .recurso {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #e1e5eb;
+        }
+
+
+        .recurso h3 {
+            color: var(--azul-unab);
+            margin-bottom: 10px;
+        }
+
+
+        .recurso a {
+            display: block;
+            margin-top: 20px;
+            color: var(--rojo-unab);
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           SOLICITAR ORIENTACIÓN
+        ===================================================== */
+
+        .orientacion {
+            background: var(--azul-unab);
+            color: white;
+            text-align: center;
+        }
+
+
+        .orientacion h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+
+        .orientacion p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+
+
+        /* =====================================================
+           CONTACTO
+        ===================================================== */
+
+        .contacto-grid {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+
+        .contacto-card {
+            padding: 35px;
+            border-radius: 10px;
+            background: var(--gris);
+        }
+
+
+        .contacto-card h3 {
+            color: var(--azul-unab);
+            margin-bottom: 15px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: var(--azul-unab);
+            color: white;
+            padding: 50px 8% 25px;
+        }
+
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+
+        footer a {
+            display: block;
+            margin: 8px 0;
+            opacity: 0.9;
+        }
+
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            header {
+                height: auto;
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .marcas {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .atencion {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .quienes-contenido,
+            .contacto-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .servicios-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .recursos-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding: 60px 25px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .servicios-grid,
+            .recursos-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .atencion {
+                width: 92%;
+            }
+
+            section {
+                padding: 60px 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     CABECERA
+========================================================= -->
+
+<header>
+
+    <div class="marcas">
+
+        <div class="marca-unab">
+            Universidad<br>
+            Andrés Bello
+        </div>
+
+        <div class="marca-fen">
+            FEN<br>
+            <small>Facultad de Economía y Negocios</small>
+        </div>
+
+        <div class="marca-contador">
+            Escuela de<br>
+            Contador Auditor
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#inicio">INICIO</a>
+
+        <a href="#clinica">LA CLÍNICA</a>
+
+        <a href="#servicios">SERVICIOS</a>
+
+        <a href="#recursos">RECURSOS</a>
+
+        <a href="#contacto">CONTACTO</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-contenido">
+
+        <h1>
+            CLÍNICA DE<br>
+            NEGOCIOS
+        </h1>
+
+        <h2>
+            Escuela de Contador Auditor
+        </h2>
+
+        <p>
+            Universidad Andrés Bello
+        </p>
+
+        <p>
+            Espacio de orientación y apoyo en materias
+            tributarias, contables y empresariales,
+            acercando el conocimiento académico a las
+            necesidades de la comunidad.
+        </p>
+
+        <a href="#contacto" class="boton">
+            SOLICITAR ORIENTACIÓN
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ATENCIÓN PRESENCIAL
+========================================================= -->
+
+<div class="atencion">
+
+    <div>
+
+        <div class="atencion-titulo">
+            📍 ATENCIÓN PRESENCIAL
+        </div>
+
+        <div class="atencion-lugar">
+            Campus Viña del Mar – Universidad Andrés Bello
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <div class="atencion-horario">
+            🗓 Miércoles de 12:00 a 15:30 horas
+        </div>
+
+        <div class="atencion-lugar">
+            Atención presencial a la comunidad
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     QUIÉNES SOMOS
+========================================================= -->
+
+<section class="quienes" id="clinica">
+
+    <h2 class="titulo-seccion">
+        ¿QUIÉNES SOMOS?
+    </h2>
+
+    <p class="subtitulo">
+
+        Una iniciativa de la Escuela de Contador Auditor
+        orientada a fortalecer la vinculación con la comunidad.
+
+    </p>
+
+
+    <div class="quienes-contenido">
+
+        <div class="quienes-texto">
+
+            <h3>
+                Clínica de Negocios
+            </h3>
+
+            <p>
+
+                La Clínica de Negocios busca acercar el conocimiento
+                académico a emprendedores, organizaciones y personas
+                que requieran orientación en materias relacionadas
+                con la gestión empresarial.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                El trabajo se desarrolla con el acompañamiento de
+                académicos y estudiantes de la Escuela de Contador
+                Auditor.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <div class="check">
+                <span>✓</span>
+                Orientación con enfoque académico
+            </div>
+
+            <div class="check">
+                <span>✓</span>
+                Vinculación con la comunidad
+            </div>
+
+            <div class="check">
+                <span>✓</span>
+                Formación práctica de estudiantes
+            </div>
+
+            <div class="check">
+                <span>✓</span>
+                Compromiso y responsabilidad profesional
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICIOS
+========================================================= -->
+
+<section id="servicios">
+
+    <h2 class="titulo-seccion">
+        NUESTROS SERVICIOS
+    </h2>
+
+    <p class="subtitulo">
+
+        Orientación en materias vinculadas con la actividad
+        empresarial y el cumplimiento de obligaciones.
+
+    </p>
+
+
+    <div class="servicios-grid">
+
+
+        <div class="servicio">
+
+            <div class="icono">
+                🧾
+            </div>
+
+            <h3>
+                Orientación Tributaria
+            </h3>
+
+            <p>
+
+                Orientación general sobre impuestos,
+                obligaciones tributarias y normativa
+                aplicable.
+
+            </p>
+
+            <a href="#contacto">
+                Más información →
+            </a>
+
+        </div>
+
+
+        <div class="servicio">
+
+            <div class="icono">
+                🧮
+            </div>
+
+            <h3>
+                Orientación Contable
+            </h3>
+
+            <p>
+
+                Apoyo en materias contables, registros,
+                información financiera y gestión.
+
+            </p>
+
+            <a href="#contacto">
+                Más información →
+            </a>
+
+        </div>
+
+
+        <div class="servicio">
+
+            <div class="icono">
+                💼
+            </div>
+
+            <h3>
+                Apoyo a Emprendedores
+            </h3>
+
+            <p>
+
+                Orientación para quienes desarrollan
+                actividades empresariales o desean
+                iniciar un negocio.
+
+            </p>
+
+            <a href="#contacto">
+                Más información →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RECURSOS
+========================================================= -->
+
+<section class="recursos" id="recursos">
+
+    <h2 class="titulo-seccion">
+        RECURSOS
+    </h2>
+
+    <p class="subtitulo">
+
+        Material de apoyo para estudiantes,
+        emprendedores y comunidad.
+
+    </p>
+
+
+    <div class="recursos-grid">
+
+
+        <div class="recurso">
+
+            <h3>
+                📚 Material Tributario
+            </h3>
+
+            <p>
+                Guías y documentos de apoyo relacionados
+                con legislación tributaria.
+            </p>
+
+            <a href="#">
+                Ver recursos →
+            </a>
+
+        </div>
+
+
+        <div class="recurso">
+
+            <h3>
+                📊 Material Contable
+            </h3>
+
+            <p>
+                Material educativo relacionado con
+                contabilidad y gestión.
+            </p>
+
+            <a href="#">
+                Ver recursos →
+            </a>
+
+        </div>
+
+
+        <div class="recurso">
+
+            <h3>
+                🧮 Calculadoras
+            </h3>
+
+            <p>
+                Herramientas que podremos incorporar
+                progresivamente al sitio.
+            </p>
+
+            <a href="#">
+                Ver herramientas →
+            </a>
+
+        </div>
+
+
+        <div class="recurso">
+
+            <h3>
+                🔗 Enlaces útiles
+            </h3>
+
+            <p>
+                Acceso a organismos y fuentes de
+                información relevantes.
+            </p>
+
+            <a href="https://www.sii.cl/"
+               target="_blank">
+                Visitar SII →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SOLICITAR ORIENTACIÓN
+========================================================= -->
+
+<section class="orientacion">
+
+    <h2>
+        ¿NECESITAS ORIENTACIÓN?
+    </h2>
+
+    <p>
+
+        Puedes solicitar orientación y conocer nuestros
+        servicios a través de nuestros canales de contacto.
+
+    </p>
+
+    <a href="#contacto" class="boton">
+        SOLICITAR ORIENTACIÓN
+    </a>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACTO
+========================================================= -->
+
+<section id="contacto">
+
+    <h2 class="titulo-seccion">
+        CONTACTO
+    </h2>
+
+    <p class="subtitulo">
+
+        Estamos disponibles para orientar a la comunidad
+        en el ámbito de nuestras competencias.
+
+    </p>
+
+
+    <div class="contacto-grid">
+
+
+        <div class="contacto-card">
+
+            <h3>
+                📍 Atención presencial
+            </h3>
+
+            <p>
+                <strong>Campus Viña del Mar UNAB</strong>
+            </p>
+
+            <p>
+                Miércoles
+            </p>
+
+            <p>
+                <strong>
+                    12:00 a 15:30 horas
+                </strong>
+            </p>
+
+        </div>
+
+
+        <div class="contacto-card">
+
+            <h3>
+                📩 Solicitar orientación
+            </h3>
+
+            <p>
+
+                Próximamente podremos incorporar aquí
+                un formulario de solicitud de atención.
+
+            </p>
+
+            <br>
+
+            <a href="mailto:"
+               class="boton">
+                ENVIAR CONSULTA
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <h3>
+                Clínica de Negocios
+            </h3>
+
+            <p>
+                Escuela de Contador Auditor
+            </p>
+
+            <p>
+                Facultad de Economía y Negocios
+            </p>
+
+            <p>
+                Universidad Andrés Bello
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Enlaces
+            </h3>
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="#clinica">
+                La Clínica
+            </a>
+
+            <a href="#servicios">
+                Servicios
+            </a>
+
+            <a href="#recursos">
+                Recursos
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Atención
+            </h3>
+
+            <p>
+                Campus Viña del Mar
+            </p>
+
+            <p>
+                Miércoles
+            </p>
+
+            <p>
+                12:00 – 15:30 horas
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Clínica de Negocios –
+        Escuela de Contador Auditor –
+        Universidad Andrés Bello
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
+```
