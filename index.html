@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clínica de Negocios | Escuela de Contador Auditor UNAB</title>
-<meta name="description" content="Clínica de Negocios de la Escuela de Contador Auditor, sede Viña del Mar. Orientación tributaria y apoyo al emprendimiento.">
+<meta name="description" content="Clínica de Negocios de la Escuela de Contador Auditor UNAB, con atención en los campus Viña del Mar y Los Leones (Santiago). Orientación tributaria y apoyo al emprendimiento.">
 
 <style>
 :root{
@@ -95,7 +95,7 @@ nav a:hover{color:var(--rojo);border-bottom-color:var(--rojo)}
     background:var(--azul);color:#fff;
     border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,.22);
     padding:28px 34px;
-    display:grid;grid-template-columns:1.1fr 1fr;gap:25px;align-items:center;
+    display:grid;grid-template-columns:repeat(2,1fr);gap:25px;align-items:center;
 }
 .attention-title{font-size:17px;font-weight:700;text-transform:uppercase}
 .attention-hours{font-size:25px;color:#F2C14E;font-weight:800;margin-top:5px}
@@ -184,6 +184,8 @@ section{padding:82px 0}
 }
 .visit h2{font-size:35px;margin-bottom:12px}
 .visit .highlight{color:#F2C14E;font-size:26px;font-weight:800}
+.visit-campus{margin-bottom:22px}
+.visit-campus:last-child{margin-bottom:0}
 .visit-card{
     background:#fff;color:var(--texto);padding:28px;border-radius:9px
 }
@@ -191,7 +193,7 @@ section{padding:82px 0}
 .visit-card .btn{margin-top:18px}
 
 /* CONTACTO */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
 .contact-card{
     background:var(--gris);padding:30px;border-radius:8px
 }
@@ -215,6 +217,7 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
     .brand img{width:270px}
     .values{grid-template-columns:repeat(2,1fr)}
     .resource-grid{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:820px){
     .header-main{flex-direction:column;padding:18px 0}
@@ -251,7 +254,7 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
             <img src="logo-fen-unab.png" alt="Universidad Andrés Bello - Facultad de Economía y Negocios">
             <div class="school-brand">
                 Escuela de Contador Auditor
-                <span>Campus Viña del Mar</span>
+                <span>Viña del Mar · Santiago</span>
             </div>
         </div>
 
@@ -260,7 +263,7 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
             <a href="#clinica">LA CLÍNICA</a>
             <a href="#servicios">SERVICIOS</a>
             <a href="#objetivos">OBJETIVOS</a>
-            <a href="#recursos">RECURSOS</a>
+<!-- <a href="#recursos">RECURSOS</a> -->
             <a href="#contacto">CONTACTO</a>
         </nav>
     </div>
@@ -271,7 +274,7 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
 <section class="hero" id="inicio">
     <div class="container">
         <div class="hero-content">
-            <div class="eyebrow">Escuela de Contador Auditor · Sede Viña del Mar</div>
+            <div class="eyebrow">Escuela de Contador Auditor · Sedes Viña del Mar y Santiago</div>
             <h1>CLÍNICA DE<br>NEGOCIOS</h1>
             <h2>Universidad Andrés Bello</h2>
             <p>
@@ -287,12 +290,14 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
 <div class="container">
     <div class="attention">
         <div>
-            <div class="attention-title">📍 Atención presencial</div>
-            <div class="attention-place">Campus Viña del Mar · Universidad Andrés Bello</div>
+            <div class="attention-title">📍 Campus Viña del Mar</div>
+            <div class="attention-place">Universidad Andrés Bello · Viña del Mar</div>
+            <div class="attention-hours">Miércoles de 12:00 a 15:30 horas</div>
         </div>
         <div>
-            <div class="attention-hours">Miércoles de 12:00 a 15:30 horas</div>
-            <div class="attention-place">Orientación a la comunidad</div>
+            <div class="attention-title">📍 Campus Los Leones</div>
+            <div class="attention-place">Los Leones 745, Providencia · Santiago</div>
+            <div class="attention-hours">Miércoles de 12:00 a 15:00 horas</div>
         </div>
     </div>
 </div>
@@ -309,10 +314,11 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
             <div>
                 <h3>Misión</h3>
                 <div class="mission">
-                    Somos la Clínica de Negocios de la Escuela de Contador Auditor de la sede
-                    Viña del Mar, un espacio de vinculación con el medio que orienta gratuitamente
-                    a la comunidad, a los contribuyentes y a los emprendedores de la región en
-                    materias tributarias ante el Servicio de Impuestos Internos y en la gestión
+                    Somos la Clínica de Negocios de la Escuela de Contador Auditor, con
+                    presencia en los campus Viña del Mar y Los Leones (Santiago), un espacio
+                    de vinculación con el medio que orienta gratuitamente a la comunidad, a
+                    los contribuyentes y a los emprendedores de la región en materias
+                    tributarias ante el Servicio de Impuestos Internos y en la gestión
                     administrativa de sus emprendimientos, formando simultáneamente a nuestros
                     estudiantes a través de la práctica profesional real, con el acompañamiento
                     de nuestros docentes y la colaboración directa del SII.
@@ -321,11 +327,12 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
                 <h3 style="margin-top:30px">Visión</h3>
                 <div class="mission">
                     Ser reconocida, en un horizonte de cinco años, como la unidad de referencia
-                    de la Región de Valparaíso en orientación tributaria comunitaria y en apoyo
-                    al emprendimiento, ampliando progresivamente su cobertura y sus áreas de
-                    asesoría, y consolidándose como un espacio formativo donde cada generación
-                    de estudiantes de Contador Auditor desarrolla competencias profesionales
-                    reales al servicio directo de la comunidad.
+                    de las regiones de Valparaíso y Metropolitana en orientación tributaria
+                    comunitaria y en apoyo al emprendimiento, ampliando progresivamente su
+                    cobertura y sus áreas de asesoría, y consolidándose como un espacio
+                    formativo donde cada generación de estudiantes de Contador Auditor
+                    desarrolla competencias profesionales reales al servicio directo de la
+                    comunidad.
                 </div>
             </div>
 
@@ -428,7 +435,7 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
                     Ampliar el número de emprendedores de la región asesorados en su proceso
                     de iniciación de actividades y en la gestión administrativa de sus
                     emprendimientos de bienes y servicios, a través de talleres y ferias
-                    realizadas en la sede Viña del Mar.
+                    realizadas en los campus Viña del Mar y Los Leones.
                 </p>
             </article>
 
@@ -486,6 +493,7 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
     </div>
 </section>
 
+<!-- Sección RECURSOS oculta temporalmente: contenido pendiente de completar antes de publicarse.
 <section class="resources" id="recursos">
     <div class="container">
         <h2 class="section-title">RECURSOS</h2>
@@ -518,13 +526,21 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
         </div>
     </div>
 </section>
+-->
+
 
 <section class="visit">
     <div class="container visit-grid">
         <div>
             <h2>ATENCIÓN PRESENCIAL</h2>
-            <p class="highlight">Miércoles de 12:00 a 15:30 horas</p>
-            <p>Campus Viña del Mar · Universidad Andrés Bello</p>
+            <div class="visit-campus">
+                <p class="highlight">Miércoles de 12:00 a 15:30 horas</p>
+                <p>Campus Viña del Mar · Universidad Andrés Bello</p>
+            </div>
+            <div class="visit-campus">
+                <p class="highlight">Miércoles de 12:00 a 15:00 horas</p>
+                <p>Campus Los Leones · Los Leones 745, Providencia, Santiago</p>
+            </div>
         </div>
 
         <div class="visit-card">
@@ -542,14 +558,20 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
     <div class="container">
         <h2 class="section-title">CONTACTO</h2>
         <p class="lead">
-            Clínica de Negocios · Escuela de Contador Auditor · Sede Viña del Mar
+            Clínica de Negocios · Escuela de Contador Auditor · Campus Viña del Mar y Los Leones
         </p>
 
         <div class="contact-grid">
             <div class="contact-card">
-                <h3>📍 Atención presencial</h3>
-                <p><strong>Campus Viña del Mar UNAB</strong></p>
+                <h3>📍 Campus Viña del Mar</h3>
+                <p><strong>Universidad Andrés Bello · Viña del Mar</strong></p>
                 <p>Miércoles de <strong>12:00 a 15:30 horas</strong></p>
+            </div>
+
+            <div class="contact-card">
+                <h3>📍 Campus Los Leones</h3>
+                <p><strong>Los Leones 745, Providencia, Santiago</strong></p>
+                <p>Miércoles de <strong>12:00 a 15:00 horas</strong></p>
             </div>
 
             <div class="contact-card">
@@ -571,7 +593,7 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
             <div>
                 <img class="footer-logo" src="logo-fen-unab.png" alt="Universidad Andrés Bello - Facultad de Economía y Negocios">
                 <h3>Clínica de Negocios</h3>
-                <p>Escuela de Contador Auditor · Sede Viña del Mar</p>
+                <p>Escuela de Contador Auditor · Campus Viña del Mar y Los Leones</p>
             </div>
 
             <div>
@@ -580,14 +602,16 @@ footer a{color:#fff;opacity:.9;display:block;margin:6px 0}
                 <a href="#clinica">La Clínica</a>
                 <a href="#servicios">Servicios</a>
                 <a href="#objetivos">Objetivos</a>
-                <a href="#recursos">Recursos</a>
+<!-- <a href="#recursos">Recursos</a> -->
             </div>
 
             <div>
                 <h3>Atención</h3>
-                <p>Campus Viña del Mar</p>
-                <p>Miércoles</p>
-                <p>12:00 – 15:30 horas</p>
+                <p><strong>Campus Viña del Mar</strong></p>
+                <p>Miércoles · 12:00 – 15:30 horas</p>
+                <p style="margin-top:10px"><strong>Campus Los Leones</strong></p>
+                <p>Los Leones 745, Providencia, Santiago</p>
+                <p>Miércoles · 12:00 – 15:00 horas</p>
             </div>
         </div>
 
